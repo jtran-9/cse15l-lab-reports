@@ -1,5 +1,8 @@
 # Lab Report 1
+## Workspace Structure For Reference
+![Image](https://i.imgur.com/qYmLMqx.png)
 
+---
 ## Using cd
 **1. Using cd with no arguments**
 ```
@@ -60,7 +63,49 @@ But if the file is not contained within the current working directory, like the 
 [user@sahara ~/lecture1]$ ls en-us.txt
 ls: cannot access 'en-us.txt': No such file or directory
 ```
+It will only work when you include its path.
+```
+[user@sahara ~/lecture1]$ ls messages/en-us.txt
+messages/en-us.txt
+```
 
 ---
 ## Using cat
 **1. Using cat with no arguments**
+```
+[user@sahara ~]$ cat
+lecture1
+lecture1
+It prints out my entire sentence.
+It prints out my entire sentence.
+```
+Before the command was run, the working directory was the root directory, "/home". Surprisingly, running cat with no arguments did not throw an error. Instead, it waited for user input and then just printed out what was just typed in. This means that to the cat command, having no arguments just tells it that it should wait for some user input and then it will print out that input after the user finishes entering it.
+
+**2. Using cat with a directory**
+```
+[user@sahara ~/lecture1]$ cat messages
+cat: messages: Is a directory
+```
+Before the command was run, the working directory was "/home/lecture1". The terminal outputted the error message "messages: Is a directory". This error popped up because a directory was placed as its argument and the cat command is used for printing out the contents of a file. A directory could contain more folders and files so by putting a directory as an argument, we're not specifying which file should be read and printed out to the terminal.
+
+**3. Using cat with a file**
+```
+[user@sahara ~/lecture1]$ cat Hello.java
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Hello {
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
+    System.out.println(content);
+  }
+}[user@sahara ~/lecture1]$ 
+```
+Before the command was run, the working directory was "/home/lecture1". When running the command with a file, there was no error, it simply prints out the contents of the file. This makes sense since the whole point of the cat command is to print the contents of file(s). 
+```
+[user@sahara ~/lecture1]$ cat messages/ko.txt
+안녕하세요 세계
+```
+This command also works when you put in specific paths to files as the argument.

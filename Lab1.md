@@ -108,4 +108,4 @@ Before the command was run, the working directory was "/home/lecture1". When run
 [user@sahara ~/lecture1]$ cat messages/ko.txt
 안녕하세요 세계
 ```
-This command also works when you put in specific paths to files as the argument.
+This command also works when you put either relative or absolute paths to files as the argument.

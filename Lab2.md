@@ -43,5 +43,5 @@ class StringServer {
 }
 ```
 ## Screenshots of /add-message
-![Screenshot 1](https://imgur.com/0cbAqrf) <br>
-![Screenshot 2](https://imgur.com/JR8LKJO)
+![Screenshot 1](https://i.imgur.com/eqXGaIm.png) <br>
+![Screenshot 2](https://i.imgur.com/JR8LKJO.png)

@@ -60,7 +60,7 @@ When /add-message is called for the second time with the string input, "How are 
 ![Path to Private Key](https://i.imgur.com/vYa0CbL.png)
 
 ### Path to Public Key
-![Path to Public Key](https://i.imgur.com/iAUdmsi.png)
+![Path to Public Key](https://i.imgur.com/KNGXOyd.png)
 
 ### Logging In Without Typing Password
 ![No Password Needed](https://i.imgur.com/Dkw8LvE.png)

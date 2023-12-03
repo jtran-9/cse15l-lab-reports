@@ -4,7 +4,7 @@
 I'm having some trouble with my auto-grading script. It seems to work when all the tests pass, as it prints out "Grade: 100%". When some or all of the tests fail, I want it to print out how many tests the file had passed, formatted like "Grade: (testPassed) / (totalTests)". 
 But when I run the script with a repository that contains a test file that causes some errors, it will always output "Grade: / T". I'm not sure how to fix this. I'm thinking it has something to do with a character being stored into the "totalTests" variable. Below is the output that popped up on my terminal, both it working successfully and it printing the wrong output.
 <br>
-(INSERT IMG HERE)
+![error in terminal](https://i.imgur.com/xZRWR2w.png)
 <br>
 Below is my script in grade.sh
 ```
@@ -76,10 +76,12 @@ through the string, you look at the letter "T". When we go into the if statement
 getting that output. This is also the similar case with the variable, numFails. Since we can't do subtraction on characters, it just doesn't print anything, hence the output, "Grade: /T". To fix this, I suggest using a pattern that checks to see whether the current index in the string is a digit, like 
 "^[0-9]+$". Make sure you use "=~" as that lets the script now that we are checking whether the current index in the string matches the given pattern.
 ## Student's Takeaway
+![takeaway](https://i.imgur.com/vDwmtTm.png)
 So after making the changes, the terminal now prints the correct output depending on the number of tests passed/failed. So the bug was basically that as the script was iterating through the characters in the string, it was also comparing the ASCII values of each letter as well as the digits which caused
 variables, totalTests and numFails, to store characters, which ended up causing the expression "`expr $totalTest - $numFails`" and "$totalTest" to print incorrectly. To fix this bug, I just have to check whether the current character is a digit or not, which can be done by using the pattern "^[0-9]+$".
 ## All information needed for setup
 ### File and Directory Structure Needed
+![file structure](https://i.imgur.com/U3garI1.png)
 ### Contents of grade.sh before and after fixing the bug
 Before bug fix
 ```

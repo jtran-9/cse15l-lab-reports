@@ -220,3 +220,5 @@ where the repository can be any valid lab3 repository that contains tests that f
 ### Description to fix bug
 To fix the bug, instead of comparing each individual indices with the integer 0, which causes the script to just compare ASCII values, you have to change it so that it tests to see whether the character follows the pattern, "^[0-9]+$", which checks to see whether the character is a digit or not. When
 implementing this, the character at the current index is a digit, then we can update the variables totalTest and numFails correctly, if it's not a digit, then we just move onto the next index in the string.
+## Reflection
+I thought it was pretty cool to learn more about bash scripts and vim. Learning about bash scripts helped me kind of automate testing environments, automating things like creating/removing files and directories, cloning repositories, and running tests. Learning about vim was a little confusing at first but I'm glad I learned it as it helped provide me with one way to make changes to files on a server from another machine.
